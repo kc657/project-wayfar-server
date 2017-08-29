@@ -1,15 +1,15 @@
-let express = require('express'),
-  app = express(),
-  mongoose = require('mongoose'),
-  db = require('./models'),
-  controllers = require('./controllers'),
-  bodyParser = require('body-parser'),
-  cookieParser = require('cookie-parser'),
-  session = require('express-session'),
-  passport = require('passport'),
-  LocalStrategy = require('passport-local').Strategy,
-  router = express.Router(),
-  User = db.User;
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose')
+const db = require('./models')
+const controllers = require('./controllers')
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy
+const router = express.Router()
+let User = db.User
 
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({extended: true}))
